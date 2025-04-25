@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediGuide - Medicine Recommendation System</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header> 
+        <div class="logo">
+            <h1><i class="fas fa-heartbeat"></i> MediGuide</h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="symptom-checker.html">Symptom Checker</a></li>
+                <li><a href="medicines.html">Medicines</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="login.html" class="login-btn">Login</a></li>
+            </ul>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+        <div class="theme-toggle">
+            <i class="fas fa-moon"></i>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>AI-Powered Medicine Recommendations</h1>
+            <p>Get instant medicine suggestions based on your symptoms</p>
+            <div class="search-container">
+                <input type="text" placeholder="Enter your symptoms..." id="home-search">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            <a href="symptom-checker.html" class="cta-btn">Check Symptoms Now</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2>How It Works</h2>
+        <div class="features-container">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-notes-medical"></i>
+                </div>
+                <h3>Enter Your Symptoms</h3>
+                <p>Simply type your symptoms in English or Hinglish</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-stethoscope"></i>
+                </div>
+                <h3>Instant Analysis</h3>
+                <p>Our AI analyzes your symptoms within seconds</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-pills"></i>
+                </div>
+                <h3>Get Recommendations</h3>
+                <p>View recommended medicines and precautions</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-user-md"></i>
+                </div>
+                <h3>Medical Guidance</h3>
+                <p>Receive advice on when to consult a doctor</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Health Tips Section -->
+    <section class="health-tips">
+        <h2>Health Tips & FAQs</h2>
+        <div class="tips-container">
+            <div class="tip-card">
+                <h3><i class="fas fa-heart"></i> Stay Hydrated</h3>
+                <p>Drink at least 8 glasses of water daily for optimal health.</p>
+            </div>
+            <div class="tip-card">
+                <h3><i class="fas fa-bed"></i> Sleep Well</h3>
+                <p>Aim for 7-8 hours of quality sleep every night.</p>
+            </div>
+            <div class="tip-card">
+                <h3><i class="fas fa-walking"></i> Regular Exercise</h3>
+                <p>At least 30 minutes of moderate activity daily improves health.</p>
+            </div>
+            <div class="tip-card">
+                <h3><i class="fas fa-apple-alt"></i> Balanced Diet</h3>
+                <p>Include plenty of fruits, vegetables, and whole grains.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chatbot Section -->
+    <div class="chat-bot">
+        <div class="chat-header">
+            <h3><i class="fas fa-robot"></i> MediGuide Assistant</h3>
+            <span class="close-chat"><i class="fas fa-times"></i></span>
+        </div>
+        <div class="chat-messages">
+            <!-- Messages will be added here dynamically -->
+        </div>
+        <div class="chat-input">
+            <input type="text" placeholder="Type your symptoms or questions here...">
+            <button><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+    <div class="chat-bot-toggle">
+        <i class="fas fa-comment-medical"></i>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-columns">
+            <div class="footer-column">
+                <h3>MediGuide</h3>
+                <p>Your personal AI health assistant for medicine recommendations.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="symptom-checker.html">Symptom Checker</a></li>
+                    <li><a href="medicines.html">Medicines</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-envelope"></i> mediguide1@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +91 9823000010</p>
+                <p><i class="fas fa-map-marker-alt"></i> Medilife park,(Medical City)</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 MediGuide. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symptom Checker - MediGuide</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/symptom-checker.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1><i class="fas fa-heartbeat"></i> MediGuide</h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="symptom-checker.html" class="active">Symptom Checker</a></li>
+                <li><a href="medicines.html">Medicines</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="login.html" class="login-btn">Login</a></li>
+            </ul>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+        <div class="theme-toggle">
+            <i class="fas fa-moon"></i>
+        </div>
+    </header>
+
+    <!-- Symptom Checker Section -->
+    <section class="symptom-checker">
+        <div class="checker-container">
+            <h1>AI Symptom Checker</h1>
+            <p>Enter your symptoms below and get instant medicine recommendations</p>
+            
+            <form id="symptom-form">
+                <div class="input-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="symptoms-input" placeholder="Type your symptoms (e.g., fever, headache, cough)">
+                    <div class="suggestions-container" id="suggestions-container"></div>
+                </div>
+                
+                <div class="additional-options">
+                    <div class="option">
+                        <label>
+                            <input type="checkbox" id="chronic-diseases">
+                            I have chronic diseases (diabetes, hypertension, etc.)
+                        </label>
+                    </div>
+                    <div class="option">
+                        <label>
+                            <input type="checkbox" id="allergies">
+                            I have known allergies
+                        </label>
+                    </div>
+                </div>
+                
+                <button type="submit" class="check-btn">Check Now</button>
+            </form>
+            
+            <div class="loader" id="loader">
+                <div class="spinner"></div>
+                <p>Analyzing your symptoms...</p>
+            </div>
+            
+            <div class="results" id="results">
+                <div class="result-header">
+                    <h2>Analysis Results</h2>
+                    <p>Based on your symptoms, our AI suggests:</p>
+                </div>
+                
+                <div class="result-cards">
+                    <div class="result-card">
+                        <div class="card-header">
+                            <i class="fas fa-virus"></i>
+                            <h3>Possible Condition</h3>
+                        </div>
+                        <div class="card-content" id="condition-result">
+                            <!-- Content will be inserted via JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <div class="result-card">
+                        <div class="card-header">
+                            <i class="fas fa-pills"></i>
+                            <h3>Recommended Medicines</h3>
+                        </div>
+                        <div class="card-content" id="medicines-result">
+                            <!-- Content will be inserted via JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <div class="result-card">
+                        <div class="card-header">
+                            <i class="fas fa-shield-alt"></i>
+                            <h3>Precautions</h3>
+                        </div>
+                        <div class="card-content" id="precautions-result">
+                            <!-- Content will be inserted via JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <div class="result-card">
+                        <div class="card-header">
+                            <i class="fas fa-leaf"></i>
+                            <h3>Alternative Remedies</h3>
+                        </div>
+                        <div class="card-content" id="alternative-result">
+                            <!-- Content will be inserted via JavaScript -->
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="doctor-advice">
+                    <i class="fas fa-user-md"></i>
+                    <p><strong>Important:</strong> This is not a medical diagnosis. If symptoms persist or worsen, please consult a healthcare professional immediately.</p>
+                </div>
+                
+                <button class="save-btn" id="save-results">
+                    <i class="fas fa-save"></i> Save Results
+                </button>
+                
+                <button class="share-btn" id="share-results">
+                    <i class="fas fa-share-alt"></i> Share Results
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Common Health Issues Section -->
+    <section class="common-issues">
+        <h2>Common Health Issues</h2>
+        <div class="issues-container">
+            <div class="issue-card" data-symptom="headache, pain in head">
+                <!-- <img src="headache.jpeg" alt="Headache"> -->
+                <h3>Headache</h3>
+                <p>Common symptoms and treatments</p>
+                <a href="#" class="issue-link">Check Now</a>
+            </div>
+            
+            <div class="issue-card" data-symptom="fever, high temperature">
+                <!-- <img src="fever2.jpg" alt="Fever"> -->
+                <h3>Fever</h3>
+                <p>Common symptoms and treatments</p>
+                <a href="#" class="issue-link">Check Now</a>
+            </div>
+            
+            <div class="issue-card" data-symptom="cough, throat irritation">
+                <!-- <img src="cough.png" alt="Cough"> -->
+                <h3>Cough</h3>
+                <p>Common symptoms and treatments</p>
+                <a href="#" class="issue-link">Check Now</a>
+            </div>
+            
+            <div class="issue-card" data-symptom="stomach pain, nausea">
+                <!-- <img src="stomach.webp" alt="Stomach Pain"> -->
+                <h3>Stomach Pain</h3>
+                <p>Common symptoms and treatments</p>
+                <a href="#" class="issue-link">Check Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-columns">
+            <div class="footer-column">
+                <h3>MediGuide</h3>
+                <p>Your personal AI health assistant for medicine recommendations.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="symptom-checker.html">Symptom Checker</a></li>
+                    <li><a href="medicines.html">Medicines</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-envelope"></i> mediguide1@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +91 9823000010</p>
+                <p><i class="fas fa-map-marker-alt"></i> Medilife park,(Medical City)</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 MediGuide. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/symptom-checker.js"></script>
+</body>
+</html> 
